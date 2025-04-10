@@ -14,8 +14,9 @@ h2 {
  h4 {
     color: cornflowerblue; 
  }
- h5 {
+ #view {
     color: navy; 
+    background-color: cadetblue;
  }
  h6 {
     color: goldenrod; 
