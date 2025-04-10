@@ -1,4 +1,22 @@
-p {
+#para1 {
     color: coral;
     text-align: right;
 }
+h1 {
+   color: blueviolet; 
+}
+h2 {
+    color: darkseagreen; 
+ }
+ h3 {
+    color: darkslateblue; 
+ }
+ h4 {
+    color: cornflowerblue; 
+ }
+ h5 {
+    color: navy; 
+ }
+ h6 {
+    color: goldenrod; 
+ }
