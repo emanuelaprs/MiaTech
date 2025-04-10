@@ -21,3 +21,7 @@ h2 {
  h6 {
     color: goldenrod; 
  }
+.font {
+    font: 30px;
+    color: dimgray;
+}
