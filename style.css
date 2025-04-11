@@ -45,3 +45,6 @@ h1, h2 {
 a:hover {
     color: crimson;
 }
+li:last-child{
+    color: fuchsia;
+}
