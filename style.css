@@ -48,3 +48,6 @@ a:hover {
 li:last-child{
     color: fuchsia;
 }
+#para2 {
+    color: rgb(200, 150, 80);
+}
