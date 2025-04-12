@@ -54,3 +54,6 @@ li:last-child{
 #para3 {
     color: #ff0000;
 }
+#para4 {
+    color: rgba(255, 0, 0, 0.7);
+}
