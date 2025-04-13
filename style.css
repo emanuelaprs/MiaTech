@@ -60,3 +60,12 @@ li:last-child{
 #para5 {
     color: mediumseagreen;
 }
+p {
+    color: firebrick;
+}
+#para6 {
+    color: blueviolet;
+}
+.grafo {
+    color: cornflowerblue;
+}
