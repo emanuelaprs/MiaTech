@@ -69,3 +69,7 @@ p {
 .grafo {
     color: cornflowerblue;
 }
+.parent {
+    color: forestgreen;
+    text-align: left;
+}
