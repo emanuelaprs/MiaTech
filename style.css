@@ -84,3 +84,13 @@ p {
     height: 100px;
     background-color: aqua;;
 }
+
+.prem {
+    font-size: 7rem;
+}
+.pem {
+    font-size: 7em;
+}
+.fontdiv {
+    font-size: 10px;
+}
