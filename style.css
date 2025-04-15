@@ -74,5 +74,7 @@ p {
     text-align: left;
 }
 .squared {
-    width: 40%;
+    width: 50%;
+    height: 50%;
+    background-color: gold;
 }
