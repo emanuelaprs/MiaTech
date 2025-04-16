@@ -114,5 +114,7 @@ p {
 .box1 {
     padding: 30px;
     margin: 20px;
+    border-style: dotted;
+    border-width: 5px;
     background-color: blue;
 }
