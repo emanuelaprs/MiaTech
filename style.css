@@ -118,3 +118,7 @@ p {
     border-width: 5px;
     background-color: blue;
 }
+
+.inline-block-list li{
+    display: inline-block;
+}
