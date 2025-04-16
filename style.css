@@ -102,3 +102,11 @@ p {
 * {
     color: var(--red-color);
 }
+:root {
+    --element-padding: 25px;
+}
+
+.box {
+    padding: var(--element-padding);
+    background-color: black;
+}
