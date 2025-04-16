@@ -110,3 +110,8 @@ p {
     padding: var(--element-padding);
     background-color: black;
 }
+
+.box1 {
+    padding: 30px;
+    background-color: blue;
+}
