@@ -122,3 +122,28 @@ p {
 .inline-block-list li{
     display: inline-block;
 }
+
+.inline-span {
+    display: inline;
+    border: 1px solid green;
+    background-color: cadetblue;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+.inline-block-span {
+    display: inline-block;
+    border: 1px solid green;
+    background-color: cadetblue;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+.block-span {
+    display: block;
+    border: 1px solid green;
+    background-color: cadetblue;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
