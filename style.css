@@ -94,3 +94,11 @@ p {
 .fontdiv {
     font-size: 10px;
 }
+
+:root {
+    --red-color: rgb(255, 0, 0);
+}
+
+* {
+    color: var(--red-color);
+}
