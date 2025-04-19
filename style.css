@@ -146,7 +146,7 @@ p {
     height: 100px;
     padding: 5px;
 }
-/* Esercizio fac simile sito web */
+/* Esercizio fac simile sito web & position sticky-fixed */
 .headerfac { 
     background-color: #E7E9EB;
     text-align: center;
@@ -159,8 +159,10 @@ p {
     text-align: center;
     margin-bottom: 8px;
     padding: 12px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
+    border: darkgoldenrod solid;
 }
 
 .content {
@@ -170,7 +172,7 @@ p {
     padding: 108px 15px 100px 15px; ;
 }
 
-/* Fine esercizio fac simile */
+/* Fine esercizio fac simile & position sticky-fixed */
 
 /* Esercizio nascondi un elemento */
 #para7 {
