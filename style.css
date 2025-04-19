@@ -200,3 +200,17 @@ p {
     text-align: center;
 }
 
+/* Fine Esercizio Colonne */
+
+/* Esercizio Footer fixed */
+
+.footfix {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.footfix a {
+    display: block;
+}
+
