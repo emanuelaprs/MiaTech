@@ -172,3 +172,16 @@ p {
 .pflo {
     clear:right;
 }
+
+/* Esercizio Colonne */
+
+.divcolumn {
+    display: flex;
+}
+
+.divcolumn p {
+    padding: 15px;
+    border: 1px solid red;
+    text-align: center;
+}
+
