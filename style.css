@@ -164,7 +164,11 @@ p {
     display: none;
 }
 
-/* Esercizio Float */
+/* Esercizi Float 1 e 2 */
 .imgflo {
     float: right;
+}
+
+.pflo {
+    clear:none;
 }
