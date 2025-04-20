@@ -234,4 +234,19 @@ p {
     right: 0;
 }
 
+/* Fine esercizio Absolute */
 
+/* Esercizio Card */
+
+.card {
+    border: #ff0000 solid;
+    border-radius: 5px;
+    display: inline-block;
+    padding-top: 8px;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+/* Fine esercizio Card */
