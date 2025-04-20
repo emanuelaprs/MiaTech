@@ -168,8 +168,15 @@ p {
 .content {
     background-color: #E7E9EB;
     text-align: center;
+    margin-top: 8px;
     margin-bottom: 8px;
-    padding: 108px 15px 100px 15px; ;
+    padding: 108px 15px 100px 15px;  
+}
+
+.footer {
+    background-color: #E7E9EB;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Fine esercizio fac simile & position sticky-fixed */
@@ -213,4 +220,11 @@ p {
 .footfix a {
     display: block;
 }
+
+/* Esercizio Footer fixed */
+
+/* Fine Esercizio Footer fixed */
+
+/* Esercizio Card */
+
 
