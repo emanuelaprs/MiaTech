@@ -221,10 +221,17 @@ p {
     display: block;
 }
 
-/* Esercizio Footer fixed */
-
 /* Fine Esercizio Footer fixed */
 
-/* Esercizio Card */
+/* Esercizio Absolute*/
+
+.squaredfix {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+}
 
 
