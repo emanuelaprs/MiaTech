@@ -245,6 +245,10 @@ p {
     padding-top: 8px;
 }
 
+.check {
+    position: absolute;
+}
+
 .container {
     padding: 2px 16px;
 }
