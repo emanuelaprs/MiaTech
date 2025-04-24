@@ -1,0 +1,19 @@
+.flex-container {
+    display: flex;
+    background-color: cadetblue;
+    height: 100px;
+    width: 300px;
+    align-items: center;
+}
+
+.flex-container div {
+    background-color: burlywood;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+}
+
+.item2 {
+    flex-basis: 200px;
+}
