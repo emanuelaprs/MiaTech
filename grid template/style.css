@@ -12,3 +12,13 @@
         text-align: center;   
         border: solid 1px black;
 }
+
+@media (max-width: 600px) {
+    .grid-container {
+        background-color: lightcoral;
+    }
+    .grid-container div {
+        width: 50px;
+        height: 25px;
+    }
+}
