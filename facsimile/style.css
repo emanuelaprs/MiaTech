@@ -16,20 +16,28 @@
 }
 
 .mainfac {
-    background-color: #E7E9EB;
     height: 150px;
     display: flex;
-    gap: 40px;
+    gap: 10px;
     
 }
 
 .mainfac div {
     text-align: center;
     align-content: center;
+    background-color: #E7E9EB;
 }
 
 .content1 {
+    flex-grow: 1;
+}
 
+.content2 {
+    flex-grow: 5;
+}
+
+.content3 {
+    flex-grow: 1;
 }
 
 .footfac {
