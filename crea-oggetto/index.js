@@ -5,3 +5,7 @@ let person = {
 };
 
 console.log(person);
+
+// Esercizio Accedi alle proprietà
+
+console.log(person.age);
