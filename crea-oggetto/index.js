@@ -9,3 +9,8 @@ console.log(person);
 // Esercizio Accedi alle proprietà
 
 console.log(person.age);
+
+// Modifica age
+
+person.age = 50;
+
