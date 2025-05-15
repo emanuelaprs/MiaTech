@@ -1,6 +1,6 @@
-let number = 10; 
+let number = 3; 
     if (number > 5) {
-//codice da eseguire se la condizione è vera
+        console.log("la variabile è maggiore di 5");
+    } else {
+        console.log("la variabile è minore di 5");
     }
-
-console.log("La variabile è maggiore di 5")
