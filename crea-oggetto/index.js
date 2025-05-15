@@ -2,7 +2,6 @@ let person = {
     name: "Ugo",
     age: 45,
     city: "Roma",
-    job: "Ragioniere"
 };
 
 console.log(person);
@@ -16,5 +15,7 @@ console.log(person.age);
 person.age = 50;
 
 // Ho aggiunto una nuova proprietà - job
+
+person.job = "Ragioniere";
 
 console.log(person.job);
