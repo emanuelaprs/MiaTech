@@ -1,16 +1,16 @@
 let score = parseInt(prompt("Inserisci il tuo voto"));
 
-switch (score) {
-    case 1: 
+switch (true) {
+    case (score >= 90 && score <= 100):
         console.log("voto ottimo");
         break;
-    case 2:
+    case (score >= 70 && score <= 89):
         console.log("voto buono");
         break;
-    case 3:
+    case (score >= 60 && score <= 69):
         console.log("voto sufficiente");
         break;
-    case 4:
+    case (score >= 60 && score <= 69):
         console.log("voto insufficiente");
         break;
 }
