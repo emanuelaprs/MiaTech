@@ -13,3 +13,4 @@ let [primoNumero, secondoNumero] = numebrs;
 
 console.log(primoNumero);
 console.log(secondoNumero);
+
