@@ -7,10 +7,7 @@ let [primo, secondo] = numebrs;
 console.log(primo);
 console.log(secondo);
 
-// Esercizio Destructuring con nomi di variabili diversi
+// Esercizio Saltare elementi durante il destructuring
 
-let [primoNumero, secondoNumero] = numebrs;
 
-console.log(primoNumero);
-console.log(secondoNumero);
 
