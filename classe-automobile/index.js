@@ -31,3 +31,19 @@ console.log(car.mostraChilometraggio());
 car.aggiungiChilometri(80);
 console.log(car.mostraChilometraggio());
 
+// Esercizio Sottoclasse elettrica
+
+class Elettrica extends automobile {
+    constructor (marca, modello, anno, chilometraggio = 0, autonomia) {
+        super (marca, modello, anno, chilometraggio = 0);
+        this.autonomia = autonomia;
+    }
+
+    descrizione() {
+        return `${super.descrizione()} - autonomia: ${this.autonomia} km`;
+    }
+
+    ricarica(km) {
+        this.autonomia += km;
+    }
+}
