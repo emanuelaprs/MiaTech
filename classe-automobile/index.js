@@ -47,3 +47,12 @@ class Elettrica extends automobile {
         this.autonomia += km;
     }
 }
+
+// Esercizio Aggiungi metodo saluta()
+
+automobile.prototype.saluta = function() {
+    return `Ciao sono una ${this.marca} ${this.modello}.`;
+};
+
+const auto = new automobile("Opel", "Corsa");
+console.log(auto.saluta());
