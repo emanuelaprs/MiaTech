@@ -18,10 +18,22 @@ class automobile {
     mostraChilometraggio() {
         return this.chilometraggio;
     }
+
+    #calcolaEtà() {
+    const annoCorrente = new Date().getFullYear();
+    return annoCorrente - this.anno;
+    }
+
+    mostraEtà() {
+    const età = this.#calcolaEtà();
+    console.log(età);
+    }
 }
 
 const car = new automobile("Opel", "Corsa", 2010);
 console.log(car.descrizione()); 
+
+car.mostraEtà();
 
 // Esercizio Aggiungiamo metodi e proprietà -- (aggiunto allo stesso codice sopra)
 
@@ -56,3 +68,4 @@ automobile.prototype.saluta = function() {
 
 const auto = new automobile("Opel", "Corsa");
 console.log(auto.saluta());
+
