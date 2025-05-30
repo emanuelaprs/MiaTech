@@ -13,3 +13,17 @@ function stampaMessaggio() {
 }
 
 setInterval(stampaMessaggio, 2000);
+
+// Esercizio interrompere setInterval con clearInterval
+
+function riprodurreMessaggio() {
+    console.log("Il messaggio compare ogni secondo");
+}
+
+const intervallo = setInterval(riprodurreMessaggio, 1000);
+
+setTimeout(() => {
+    clearInterval(intervallo);
+    console.log("Intervallo si interrompe dopo cinque secondi");
+}, 5000);
+
