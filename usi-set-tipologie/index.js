@@ -5,3 +5,11 @@ function mostraMessaggio() {
 }
 
 setTimeout(mostraMessaggio, 3000);
+
+// Esercizio Utilizzare setInterval
+
+function stampaMessaggio() {
+    console.log("Il messaggio compare ogni due secondi");
+}
+
+setInterval(stampaMessaggio, 2000);
