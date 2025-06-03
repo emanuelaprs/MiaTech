@@ -12,3 +12,20 @@ function divisione(numeratore, denominatore) {
     }
 }
 
+// Esercizio Gestione di più tipi di errori
+
+function operazioneStringa (input) {
+    try {
+        if (typeof input !== 'string') {
+            throw new TypeError('Errore: il valore non è una stringa');
+        }
+        const risultato = input.toUpperCase();
+        console.log("Errore di tipo", risultato);
+    } catch (error) {
+        if (error instanceof TypeError) {
+            console.error(error.message);
+        } else {
+            console.error("Errore generico", error.message);
+        }
+    }
+}
