@@ -29,3 +29,17 @@ function operazioneStringa (input) {
         }
     }
 }
+
+// Esercizio Uso di finnaly per eseguire codice indipendentemente dal risultato
+
+try {
+    let risultato = 10 / 0;
+    if (!isFinite(risultato)) {
+        throw new Error("Divisione per zero");
+    }
+    console.log("Risultato", risultato);
+} catch (errore) {
+    console.log("Si è verificato un errore", errore.message);
+} finally {
+    console.log("Operazione completata");
+}
