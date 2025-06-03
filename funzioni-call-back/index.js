@@ -23,3 +23,23 @@ function conCallback(callback) {
  }
  
  eseguiOperazione(5, mostraRisultato);
+
+  // Esercizio Callback annidati
+
+  function somma (a, b, callback) {
+    const risultato = a + b;
+    console.log(`Somma: ${a} + ${b} = ${risultato}`);
+    callback(risultato);
+  }
+
+  function moltiplica (numero, callback) {
+    const risultato = numero * 2;
+    console.log(`Moltiplicazione: ${numero} * 2 = ${risultato}`);
+    callback(risultato);
+  }
+
+  somma(3, 4, function(sommaRisultato) {
+  moltiplica(sommaRisultato, function(moltiplicaRisultato) {
+    console.log(`Risultato finale: ${moltiplicaRisultato}`);
+  });
+});
