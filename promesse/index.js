@@ -60,3 +60,26 @@ function promessa2(esito) {
 promessa2(true);
 
 promessa2(false);
+
+// Esercizio Catena di promesse semplici
+
+function nuovaPromessa() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(2);
+        }, 1000);
+    });
+}
+
+nuovaPromessa()
+.then(numero => {
+    console.log(`Valore iniziale: ${numero}`);
+    return numero * 2;
+})
+.then(risultatoMoltiplicazione => {
+    console.log(`Dopo moltiplicazione: ${risultatoMoltiplicazione}`);
+    return risultatoMoltiplicazione + 3;
+})
+.then(risultatoFinale => {
+        console.log(`Risultato finale: ${risultatoFinale}`);
+    })
