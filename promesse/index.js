@@ -34,3 +34,29 @@ promessa1(false)
     console.error(errore);
 });
 
+// Esercizio Promessa con finally
+
+function promessa2(esito) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (esito) {
+                resolve("Operazione riuscita");
+            } else {
+                reject("Operazione fallita");
+            } 
+        }, 1000);
+    })
+    .then(risultato => {
+        console.log("Risposta", risultato);
+    })
+    .catch(errore => {
+        console.error("Errore", errore);
+    })
+    .finally(() => {
+    console.log("Blocco finally eseguito: questa azione viene eseguita sempre");
+  });
+}
+
+promessa2(true);
+
+promessa2(false);
