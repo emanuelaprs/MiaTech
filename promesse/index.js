@@ -83,3 +83,30 @@ nuovaPromessa()
 .then(risultatoFinale => {
         console.log(`Risultato finale: ${risultatoFinale}`);
     })
+
+// Esercizio Catena di promesse con condizioni
+
+function altraPromessa() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(4);
+        }, 1000);
+    });
+}
+
+altraPromessa() 
+.then(numero => {
+    console.log(`Numero ricevuto: ${numero}`);
+    return numero;
+})
+ .then(numero => {
+    if (numero % 2 === 0) {
+      return numero * 2; 
+    } else {
+      return numero + 1;
+    }
+  })
+  .then(risultato => {
+    console.log(`Risultato finale: ${risultato}`);
+    return risultato;
+  })
