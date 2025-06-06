@@ -48,3 +48,40 @@ Promise.race([promessaSvelta(), promessaCalma()])
 .catch((errore) => {
     console.error(errore);
 });
+
+// Esercizio Utilizzare Promise.allSettled ---FINIRE---
+
+function promessaRisolta1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Promessa 1 risolta');
+        }, 1000);
+    });
+}
+
+function promessaRisolta2() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Promessa 2 risolta');
+        }, 2000);
+    });
+}
+
+function promessaRigettata() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject('Promessa rifiutata');
+        }, 1500);
+    });
+}
+
+Promise.allSettled([promessaRisolta1(), promessaRisolta2(),promessaRigettata()])
+.then(risultati => {
+    risultati.forEach((result, index) => {
+         if (result.status === 'fulfilled') {
+        console.log(`Promise ${index + 1} risolta con valore:`, result.value);
+      } else {
+        console.log(`Promise ${index + 1} rifiutata con motivo:`, result.reason);
+      }
+    });
+});
