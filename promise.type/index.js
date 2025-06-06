@@ -49,7 +49,7 @@ Promise.race([promessaSvelta(), promessaCalma()])
     console.error(errore);
 });
 
-// Esercizio Utilizzare Promise.allSettled ---FINIRE---
+// Esercizio Utilizzare Promise.allSettled 
 
 function promessaRisolta1() {
     return new Promise((resolve, reject) => {
