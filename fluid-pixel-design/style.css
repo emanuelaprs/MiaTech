@@ -1,0 +1,20 @@
+/* Esercizio Fluid design */
+
+body {
+    height: 100vh;
+}
+
+.squared {
+    width: 20%;
+    height: 30%;
+    background-color: blue;
+}
+
+/* Esercizio Pixel design */
+
+.squared2 {
+    width: 100px;
+    height: 100px;
+    background-color:aquamarine;
+}
+
