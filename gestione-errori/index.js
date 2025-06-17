@@ -30,3 +30,11 @@ function promessaBool(boolValue) {
  promessaBool(false)
  .then(result => console.log('Successo:', result))
   .catch(error => console.log('Errore:', error));
+
+  // Esercizio Gestione degli errori in una catena di promesse ---FINIRE--
+
+  function PromessaCasuale() {
+    return new Promise((resolve, reject) => {
+
+    })
+  }

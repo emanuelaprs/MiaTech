@@ -110,3 +110,21 @@ altraPromessa()
     console.log(`Risultato finale: ${risultato}`);
     return risultato;
   })
+
+  // Esercizio Catena di promesse con gestione degli errori --- FINIRE ----
+
+  function promessaCasuale() {
+    return new Promise((resolve, reject) => {
+        const valoreCasuale = Math.random();
+        if (valoreCasuale > 0.5) {
+            resolve(`✅ Successo: ${valoreCasuale.toFixed(2)}`);
+        } else {
+            reject(`✅ Successo: ${valoreCasuale.toFixed(2)}`);
+        }
+  });
+}
+
+promessaCasuale()
+.then(risultato => {
+    console.log(risultato)
+})
