@@ -1,0 +1,8 @@
+/* Esercizio Padding */
+
+.mioDiv {
+    color: crimson;
+    background-color: darkgrey;
+    width: 150px;
+    padding: 25px;
+}
