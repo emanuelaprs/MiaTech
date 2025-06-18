@@ -1,9 +1,17 @@
 /* Esercizio Variabili */
 
 :root {
-    ---colore-rosso: red;
+    --colore-rosso: red;
+    --padding-box: 30px;
 }
 
 * {
-    color: var(---colore-rosso);
+    color: var(--colore-rosso);
+}
+
+/* Esercizio Variabile spacing  - ho integrato la root dell'esercizio precedente */
+
+.box {
+    background-color: burlywood;
+    padding: var(--padding-box);
 }
