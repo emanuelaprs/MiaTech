@@ -1,0 +1,9 @@
+/* Esercizio Variabili */
+
+:root {
+    ---colore-rosso: red;
+}
+
+* {
+    color: var(---colore-rosso);
+}
