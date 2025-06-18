@@ -1,4 +1,4 @@
-/* Esercizio Padding + Margin */
+/* Esercizio Padding + Margin + Border */
 
 .mioDiv {
     color: crimson;
@@ -6,4 +6,5 @@
     width: 150px;
     padding: 25px;
     margin: 100px;
+    border: 8px solid cyan;
 }
