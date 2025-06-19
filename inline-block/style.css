@@ -4,3 +4,31 @@ li {
     display: inline-block;
 }
 
+/* Esercizio Inline vs inline-block vs block */
+
+.inline {
+    border: 2px solid brown;
+    background-color: darkgoldenrod;
+    width: 60px;
+    height: 40px;
+    margin: 4px;
+    display: inline;
+}
+
+.inline-block {
+    border: 2px solid brown;
+    background-color: darkgoldenrod;
+    width: 60px;
+    height: 40px;
+    margin: 4px;
+    display: inline-block;
+}
+
+.block {
+    border: 2px solid brown;
+    background-color: darkgoldenrod;
+    width: 60px;
+    height: 40px;
+    margin: 4px;
+    display: block;
+}
