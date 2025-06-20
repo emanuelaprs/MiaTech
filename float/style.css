@@ -3,3 +3,9 @@
 .imgfloat {
     float: right;
 }
+
+/* Esercizio Float 2 */
+ 
+.parag {
+    clear: right;
+}
