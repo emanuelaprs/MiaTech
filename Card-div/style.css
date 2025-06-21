@@ -1,0 +1,27 @@
+.card {
+    background-color: beige;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 0 0 10px;
+    position: relative;
+}
+
+.check {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 1px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 2px 16px;
+}
