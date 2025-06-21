@@ -1,0 +1,15 @@
+/* Eserfcizio Sticky */
+
+.navsticky {
+    background-color: darksalmon;
+    position: sticky;
+}
+
+/* Eserfcizio Fixed */
+
+.navfixed {
+    background-color: mediumturquoise;
+    position: fixed;
+}
+
+/* Questo esercizio qui non rende. La scorsa volta il file html era molto scritto ed era evidente ciò che accadeva con questi position */
