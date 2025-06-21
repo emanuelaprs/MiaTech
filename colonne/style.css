@@ -1,0 +1,9 @@
+.divcolumn {
+    display: flex;
+}
+
+.divcolumn p {
+    padding: 15px;
+    border: 2px dashed green;
+    text-align: center;
+}
