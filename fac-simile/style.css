@@ -1,0 +1,46 @@
+.headerFac {
+    background-color:lightgray;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 8px;
+}
+
+.navFac {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 8px;
+}
+
+.mainFac {
+    height: 150px;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+}
+
+.mainFac div {
+    background-color: lightgray;
+    text-align: center;
+    align-content: center;
+}
+
+.content1 {
+    flex-grow: 1;
+}
+
+.content2 {
+    flex-grow: 5;
+}
+
+.content3 {
+    flex-grow: 1;
+}
+
+.footFac {
+    background-color:lightgray;
+    text-align: center;
+    padding: 20px;
+    margin-top: 8px;
+    
+}
