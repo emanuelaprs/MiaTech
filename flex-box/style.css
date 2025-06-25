@@ -1,5 +1,6 @@
-/* Esercizio Flexbox*/
+/* Esercizio Flexbox - Numeriamo i div - */
 
 .flex {
     display: flex;
+    flex-direction: column;
 }
