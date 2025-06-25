@@ -1,0 +1,22 @@
+.container {
+    width: 300px;
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    
+}
+
+.container div {
+    border: 2px solid rgba(89, 37, 185, 0.884);
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+}
+
+.item2 {
+    flex-basis: 300px;
+}
