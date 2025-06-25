@@ -1,6 +1,14 @@
-/* Esercizio Flexbox - Numeriamo i div - */
+/* Esercizio Flexbox - Numeriamo i div */
 
 .flex {
     display: flex;
     flex-direction: column;
+
+}
+
+/* Esercizio Reverse */
+
+.reverse {
+    display: flex;
+    flex-direction: column-reverse;
 }
