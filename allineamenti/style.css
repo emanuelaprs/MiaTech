@@ -12,3 +12,17 @@
     border: 2px solid royalblue;
     padding: 10px;
 }
+
+/* Esercizio Justify-content */
+
+.containerDue {
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item2 {
+    border: 2px solid aquamarine;
+    padding: 10px;
+}
