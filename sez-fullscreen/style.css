@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fullscreen {
+    background-color: cadetblue;
+    width: 100vw;
+    height: 100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
