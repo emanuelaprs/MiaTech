@@ -19,3 +19,14 @@ console.log(age);
 age = 8;
 
 console.log(age);
+
+// Esercizio Ridefinizione di variabili
+
+let numero = 10;
+
+{
+    let numero = 20;
+    console.log(numero);
+}
+
+console.log(numero);
