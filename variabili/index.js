@@ -30,3 +30,16 @@ let numero = 10;
 }
 
 console.log(numero);
+
+// Esercizio Scoping delle variabili
+
+let outside = 25;
+
+{
+    let inside = 50;
+    console.log(inside);
+    console.log(outside);
+}
+
+console.log(outside);
+console.log(inside);
