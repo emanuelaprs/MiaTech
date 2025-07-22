@@ -121,7 +121,19 @@ function stamp() {
 function contaVocali(string) {
   let arrayString = string.split("");
   console.log(arrayString);
-  //  ------ CONTINUA ESERCIZIO ------
+
+  const vocali = ["a", "e", "i", "o", "u"];
+
+  let conta = 0;
+
+  for (let i = 0; i < arrayString.length; i++) {
+    let carattere = arrayString[i];
+
+    if (vocali.includes(carattere)) {
+      conta++;
+    }
+  }
+  return conta;
 }
 
-contaVocali("Esercitazione");
+console.log(contaVocali("Esercitazione"));
