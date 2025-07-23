@@ -19,3 +19,17 @@ let {name: firstName, surname: secondName} = person;
 console.log(firstName);
 console.log(secondName);
 
+// Esercizio Destructuring con valori predefiniti - oggetto
+
+const scientist = {
+    nome: "Albert",
+    professione: "Scientist",
+};
+
+const {
+    nome,
+    cognome = "Einstein",
+    nazionalità = "tedesco",
+} = scientist 
+
+console.log(nome, cognome);

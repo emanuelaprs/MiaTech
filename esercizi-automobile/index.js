@@ -34,6 +34,16 @@ class Automobile {
             return `Avviso: ${this.marca} ${this.modello} ha superato i 100.000 km!`;
         }
     }
+
+    static confrontaChilometraggio(auto1, auto2) {
+        if (auto1.chilometraggio > auto2.chilometraggio) {
+            return `${auto1.marca} ${auto1.modello} ha più chilometri (${auto1.chilometraggio} km) di ${auto2.marca} (${auto2.modello} (${auto2.chilometraggio} km)` ;
+        } else if (auto1.chilometraggio < auto2.chilometraggio) {
+            return `${auto2.marca} ha più chilometri (${auto2.modello} km) di ${auto1.marca} (${auto1.modello} (${auto1.chilometraggio} km)`;
+        } else {
+            return `Entrambe le auto (${auto1.modello} e ${auto2.modello}) hanno lo stesso chilometraggio (${auto1.chilometraggio} km)`;
+        }
+    }
 }
 
 const myCar = new Automobile("Ford", "Focus", 2010);
@@ -82,4 +92,10 @@ console.log(myElectricCar.mostraEtà());
 
 // Esercizio Metodo protetto  ---> SVOLTO A META'
 
-//
+// Esercizio Confronta km
+
+let auto1 = new Automobile("Fiat", "Panda", 2017, 90000);
+let auto2 = new Automobile("Mercedes", "GLA", 2019, 120000);
+
+console.log(Automobile.confrontaChilometraggio(auto1, auto2));
+
