@@ -119,21 +119,25 @@ function stamp() {
 // Scrivi una funzione che riceve una stringa e restituisce quante vocali contiene
 
 function contaVocali(string) {
-  let arrayString = string.split("");
+  let arrayString = string.toLowerCase().split("");
   console.log(arrayString);
 
   const vocali = ["a", "e", "i", "o", "u"];
 
-  let conta = 0;
+  let conta = new Set();
 
   for (let i = 0; i < arrayString.length; i++) {
     let carattere = arrayString[i];
 
     if (vocali.includes(carattere)) {
-      conta++;
+      conta.add(carattere);
     }
   }
   return conta;
 }
 
 console.log(contaVocali("Esercitazione"));
+
+
+// NO RIPETIZIONI come fare? -> Set anziché un array, questo automaticamente elimina i duplicati, mantenendo solo vocali uniche.
+
