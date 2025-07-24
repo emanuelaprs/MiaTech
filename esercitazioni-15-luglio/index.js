@@ -138,6 +138,5 @@ function contaVocali(string) {
 
 console.log(contaVocali("Esercitazione"));
 
-
 // NO RIPETIZIONI come fare? -> Set anziché un array, questo automaticamente elimina i duplicati, mantenendo solo vocali uniche.
 

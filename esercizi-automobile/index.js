@@ -2,11 +2,14 @@
 // Esercizio Automobile
 
 class Automobile {
+    #contatoreChiamata;
+
     constructor(marca, modello, anno, chilometraggio = 0) {
     this.marca = marca;
     this.modello = modello;
     this.anno = anno;
     this.chilometraggio = chilometraggio;
+    this.#contatoreChiamata = 0;
     }
   descrizione() {
     return `Automobile: ${this.marca} ${this.modello} ${this.anno}`;
@@ -44,6 +47,16 @@ class Automobile {
             return `Entrambe le auto (${auto1.modello} e ${auto2.modello}) hanno lo stesso chilometraggio (${auto1.chilometraggio} km)`;
         }
     }
+    guida(km) {
+    this.chilometraggio += km;
+    this.#contatoreChiamata++; 
+    console.log(`Hai guidato per ${km} km.`);
+    }
+    
+    getNumeroChiamateGuida() {
+    return this.#contatoreChiamata;
+  }
+
 }
 
 const myCar = new Automobile("Ford", "Focus", 2010);
@@ -71,7 +84,6 @@ class Elettrica extends Automobile {
         this.autonomia += km;
         console.log(`Autonomia aumentata di ${km} km. Nuova autonomia: ${this.autonomia} km.`);
     }
-
     
 }
 
@@ -99,3 +111,9 @@ let auto2 = new Automobile("Mercedes", "GLA", 2019, 120000);
 
 console.log(Automobile.confrontaChilometraggio(auto1, auto2));
 
+// Esercizio Contatore - proprietà privata
+
+auto1.guida(50);
+auto2.guida(30);
+
+console.log(auto1.getNumeroChiamateGuida());
