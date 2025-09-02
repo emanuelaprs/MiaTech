@@ -7,6 +7,45 @@
 // - Display the filtered results in an unordered list <ul>
 // - Add a paragraph showing the total count of filtered users
 
+// Svolgimento Esercizio 1
+
+fetch('https://jsonplaceholder.typicode.com/users') // 1. Effettua la chiamata GET
+  .then(response => response.json()) // Converte la risposta in JSON
+  .then(users => {
+    // Si trasforma da JSON in Array
+    console.log(users);
+    // Uso .map dentro .then coerentemente allo scope
+    const nameEmailUsers = users.map(user => `${user.name}, ${user.email}`);
+    console.log(nameEmailUsers);
+    let listHTML = "<ul>"; // creo la lista
+    for(let i = 0; i < nameEmailUsers.length; i++) {
+        listHTML += "<li>" + nameEmailUsers[i] + "</li>"; //aggiungi un elemento li per ogni
+    }
+    listHTML += "</ul>"; // chiusura della lista 
+    console.log(listHTML);
+    const bizUsers = users.filter(user => user.email.endsWith('.biz')); // ends.With() = metodo delle stringa: controlla la parte finale della stringa
+    console.log(bizUsers);   
+    let bizListHTML = "<ul>";
+    for (let i = 0; i < bizUsers.length; i++) {
+        bizListHTML += "<li>" + bizUsers[i].name + "</li>";
+    }
+    console.log(bizListHTML); // lista degli utenti con email .biz
+    document.body.innerHTML += bizListHTML;
+  })
+  .catch(error => {
+    console.error('Errore nel recupero utenti:', error);
+  });
+
+  const countHTML = `<p>Numero totale utenti con email .biz: ${bizUsers.length}</p>`
+
+
+  // per creare la lista
+  //const list = document.createElement('li')
+    //li.textContent = nameEmailUsers;
+    //ul.appendChild(li);
+    //console(list);
+
+
 
 // Exercise 2: Todo Counter
 // Build a todo statistics page
@@ -20,6 +59,18 @@
 //   * Number of incomplete todos
 //   * User with most todos (use reduce() to find)
 // - Show all results as simple text paragraphs
+
+// SVOLGIMENTO EX. 2
+
+fetch('https://jsonplaceholder.typicode.com/todos')
+.then(reply => reply.json())
+.then(todos => {
+    console.log(todos);
+})
+.catch(error => {
+    console.error('Errore nel recupero utenti:', error);
+});
+
 
 
 // Exercise 3: Post Titles Search
