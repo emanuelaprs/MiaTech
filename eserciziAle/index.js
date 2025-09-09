@@ -83,6 +83,9 @@ fetch('https://jsonplaceholder.typicode.com/todos')
 // - Use forEach() to append results to the DOM
 // - Show count of matching posts above the list
 
+// Svolgimento Ex. 3
+
+
 
 // Exercise 4: Comments by Post
 // Display posts with their comment counts
@@ -94,6 +97,26 @@ fetch('https://jsonplaceholder.typicode.com/todos')
 //   * Post title
 //   * Number of comments for that post
 // - Display as a simple ordered list
+
+// Svolgimento Ex. 4
+
+async function commentiPerPost() {
+  const responsePosts = await fetch('https://jsonplaceholder.typicode.com/posts');
+  
+  const posts = await responsePosts.json();
+
+  const topTen = posts.slice(0, 10);
+  console.log(topTen);
+
+  const responseComments = await fetch('https://jsonplaceholder.typicode.com/comments');
+  
+  const comments = await responseComments.json();
+  console.log(comments);
+  
+  
+}
+
+commentiPerPost();
 
 
 // Exercise 5: Album and Photo Counter
