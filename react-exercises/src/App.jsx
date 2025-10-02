@@ -1,6 +1,8 @@
 import './App.css'
 import Counter from './Counter';
 import HelloWord from './HelloWord';
+import TextInput from './TextInput';
+import LoginForm from './LoginForm';
 
 
 function App() {
@@ -11,8 +13,10 @@ function App() {
     <p>Ciao mi chiamo {name}</p>
     <Counter/>
     <HelloWord/>
+    <TextInput/>
+    <LoginForm/>
     </>
-  )
+  );
 
 }
 
