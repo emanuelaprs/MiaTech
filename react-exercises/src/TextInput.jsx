@@ -3,7 +3,7 @@ import { useState } from 'react';
 function TextInput() {
     const [text, setText] = useState('') // Definisco lo stato per memorizzare il valore dell'input
 
-    // funzione che gestisce il cambiamento
+    // funzione che gestisce il cambiamento 
     const inputChange = (event) => {
         setText(event.target.value);
     };
