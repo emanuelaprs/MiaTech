@@ -23,6 +23,8 @@ function LoginForm() {
     // funzione di invio del form
     const handleSubmit = (event) => {
         event.preventDefault(); // Blocca il comportamento predefinito del form (il ricaricamento della pagina).
+
+        alert(`Username: ${form.username}\nPassword: ${form.password}`);
     }
     
     return (
@@ -37,8 +39,7 @@ function LoginForm() {
              <input onChange={handleChange} type="password" name="password" value={form.password}/>
             </div>
 
-            <button>Login</button>
-
+             <button type="submit">Submit</button>
         </form> 
         
     )
