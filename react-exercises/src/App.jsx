@@ -5,6 +5,7 @@ import TextInput from './TextInput';
 import LoginForm from './LoginForm';
 import UncontrolledInput from './UncontrolledInput'
 import ItemList from './ItemList';
+import Card from './Card';
 
 
 function App() {
@@ -31,6 +32,10 @@ function App() {
       <TextInput />
       <LoginForm />
       <UncontrolledInput />
+      <Card>
+        <p>Questa è la mia card color canarino!</p>
+      </Card>
+        
     </>
   );
 
