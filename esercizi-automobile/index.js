@@ -2,25 +2,39 @@
 // Esercizio Automobile
 
 class Automobile {
-    #contatoreChiamata;
+    #contatoreChiamate;
 
     constructor(marca, modello, anno, chilometraggio = 0) {
-    this.marca = marca;
-    this.modello = modello;
-    this.anno = anno;
-    this.chilometraggio = chilometraggio;
-    this.#contatoreChiamata = 0;
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+        this.#contatoreChiamate = 0;
     }
-  descrizione() {
-    return `Automobile: ${this.marca} ${this.modello} ${this.anno}`;
+    descrizione() {
+        return `Automobile: ${this.marca} ${this.modello} ${this.anno}`;
     }
 
-  aggiungiChilometri(km) {
-    this.chilometraggio += km;
+    aggiungiChilometri(km) {
+        this.chilometraggio += km;
+
+        this.#incrementaContatore();
     }
 
     mostraChilometraggio() {
-    return `Chilometraggio attuale: ${this.chilometraggio} km`;
+        return `Chilometraggio attuale: ${this.chilometraggio} km`;
+    }
+
+    get chilometraggioAttuale() {
+        return this.chilometraggio;
+    }
+
+    set chilometraggioAttuale(nuovoValore) {
+        if (nuovoValore >= this.chilometraggio) {
+            this.chilometraggio = nuovoValore;
+        } else {
+            console.log("Il chilometraggio non può diminuire")
+        }
     }
 
     #calcolaEtà() {
@@ -40,22 +54,33 @@ class Automobile {
 
     static confrontaChilometraggio(auto1, auto2) {
         if (auto1.chilometraggio > auto2.chilometraggio) {
-            return `${auto1.marca} ${auto1.modello} ha più chilometri (${auto1.chilometraggio} km) di ${auto2.marca} (${auto2.modello} (${auto2.chilometraggio} km)` ;
+            return `${auto1.marca} ${auto1.modello} ha più chilometri (${auto1.chilometraggio} km) di ${auto2.marca} (${auto2.modello} (${auto2.chilometraggio} km)`;
         } else if (auto1.chilometraggio < auto2.chilometraggio) {
             return `${auto2.marca} ha più chilometri (${auto2.modello} km) di ${auto1.marca} (${auto1.modello} (${auto1.chilometraggio} km)`;
         } else {
             return `Entrambe le auto (${auto1.modello} e ${auto2.modello}) hanno lo stesso chilometraggio (${auto1.chilometraggio} km)`;
         }
     }
-    guida(km) {
-    this.chilometraggio += km;
-    this.#contatoreChiamata++; 
-    console.log(`Hai guidato per ${km} km.`);
+
+    #incrementaContatore() {
+        this.#contatoreChiamate++;
     }
-    
+
+    guida(km) {
+        this.chilometraggio += km;
+        // this.#contatoreChiamate++; 
+        this.#incrementaContatore();
+
+        console.log(`Hai guidato per ${km} km.`);
+    }
+
     getNumeroChiamateGuida() {
-    return this.#contatoreChiamata;
-  }
+        return this.#contatoreChiamate;
+    }
+
+    mostraContatoreChiamate() {
+        return this.#contatoreChiamate;
+    }
 
 }
 
@@ -84,7 +109,7 @@ class Elettrica extends Automobile {
         this.autonomia += km;
         console.log(`Autonomia aumentata di ${km} km. Nuova autonomia: ${this.autonomia} km.`);
     }
-    
+
 }
 
 const myElectricCar = new Elettrica("Volkwagen", "Model E", 2024, 500, 15000);
@@ -117,3 +142,30 @@ auto1.guida(50);
 auto2.guida(30);
 
 console.log(auto1.getNumeroChiamateGuida());
+
+//	Esercizio Aggiungi km
+
+auto1.aggiungiChilometri(100);
+auto1.aggiungiChilometri(50);
+console.log("Chiamate totali:", auto1.getNumeroChiamateGuida());
+
+// Esercizio Mostra contatore
+
+auto1.aggiungiChilometri(100);
+auto1.aggiungiChilometri(50);
+
+console.log(auto1.mostraContatoreChiamate());
+
+// Esercizio Getter
+
+console.log(myCar.chilometraggioAttuale);
+
+// Esercizio Setter
+
+const a = new Automobile("Fiat", "Panda", 2017, 10000);
+
+a.chilometraggioAttuale = 12000;   //  aumenta
+console.log(a.chilometraggioAttuale); // 12000
+
+a.chilometraggioAttuale = 8000;    // non aumenta: valore resta 12000
+console.log(a.chilometraggioAttuale); // 12000
