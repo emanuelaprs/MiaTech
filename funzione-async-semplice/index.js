@@ -1,3 +1,4 @@
+// ESERCIZIO - funzione asincrona semplice
 
 function promessa() {
     return new Promise((resolve) => {
@@ -13,3 +14,24 @@ async function aspettaPromessa() {
 }
 
 aspettaPromessa()
+
+// ESERCIZIO - Gestione degli errori con try e catch
+
+async function expectedPromise(boolean) {
+    try {
+        const response = await new Promise((resolve, reject) => {
+            if (boolean) {
+                resolve("Promessa risolta!");
+            } else {
+                reject("Promessa rifiutata!");
+            }
+        });
+
+        console.log(response);
+    } catch(error) {
+        console.error("Errore catturato", error);
+    }
+}
+
+expectedPromise(true);
+expectedPromise(false);
