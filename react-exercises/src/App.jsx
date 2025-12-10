@@ -6,6 +6,7 @@ import LoginForm from './LoginForm';
 import UncontrolledInput from './UncontrolledInput'
 import ItemList from './ItemList';
 import Card from './Card';
+import useFetch from './useFetch';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
     { id: 3, nome: "white" },
   ];
 
+  //esercizio useFetch 
+  const { data, loading, error } = useFetch("https://jsonplaceholder.typicode.com/posts");
+
 
   return (
     <>
@@ -27,6 +31,10 @@ function App() {
         <ItemList items={colors} />   {/*Passo l'array di oggetti colors come prop "items" a ItemList*/}
       </div>
 
+      <div>
+        {loading ? "Caricamento in corso..." : error ? `Errore: ${error}` : JSON.stringify(data)}
+      </div>
+
       <Counter />
       <HelloWord />
       <TextInput />
@@ -35,7 +43,12 @@ function App() {
       <Card>
         <p>Questa è la mia card color canarino!</p>
       </Card>
-        
+
+      
+
+
+
+
     </>
   );
 
