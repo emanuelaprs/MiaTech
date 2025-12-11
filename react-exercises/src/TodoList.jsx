@@ -1,5 +1,5 @@
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import { useFetch } from "./hooks/useFetch"; // importa il custom hook
 import { useFilteredTodos } from "./hooks/useFilteredTodos";
 
@@ -11,6 +11,16 @@ export const TodoList = () => {
 
     const handleSearchChange = useCallback((e) => {
         setSearchTerm(e.target.value);
+    }, []);
+
+    // Riferimento per gestire il focus dell'input di ricerca
+    const searchInputRef = useRef(null);
+
+    // Al montaggio del componente, mettiamo il focus sull'input
+    useEffect(() => {
+        if (searchInputRef.current) {
+            searchInputRef.current.focus();
+        }
     }, []);
 
     // Usa il custom hook per ottenere i todo filtrati in base al termine di ricerca
@@ -32,6 +42,7 @@ export const TodoList = () => {
                 placeholder="Cerca todo..."
                 value={searchTerm}
                 onChange={handleSearchChange} // aggiorna lo stato al cambiamento dell'input
+                ref={searchInputRef} // riferimento per il focus
             />
 
             <ul>
