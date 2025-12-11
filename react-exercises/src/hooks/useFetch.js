@@ -1,38 +1,37 @@
 import { useEffect, useState } from "react";
 
-function useFetch() {   // Stati per gestire i dati, il caricamento e l’errore
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+export const useFetch = (url) => {
+  const [data, setData] = useState(null);     
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {    // Effettua la chiamata fetch ogni volta che cambia la URL
-        if (!url) return;
+  useEffect(() => {
+    if (!url) return;
 
-        const fetchData = async () => {
-            setLoading(true);
-            setError(null);
+    
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
 
-            try {
-                const response = await fetch(url);
+      try {
+        const response = await fetch(url);
 
-                if (!response.ok) {
-                    throw new Error("Errore");
-                }
+        if (!response.ok) {
+          throw new Error("Errore nella risposta del server");
+        }
 
-                const data = await response.json();
-                setData(data);
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
-        };
+        const json = await response.json();
+        setData(json);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-        fetchData();
-    }, []);
+    fetchData();
+  }, [url]); // esegue di nuovo la fetch se cambia la URL
 
-    return
-}
-
-
-export default useFetch; 
+  // RITORNO CORRETTO SU UNA SOLA RIGA
+  return { data, loading, error };
+};

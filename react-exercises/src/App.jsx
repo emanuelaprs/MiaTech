@@ -6,8 +6,8 @@ import LoginForm from './LoginForm';
 import UncontrolledInput from './UncontrolledInput'
 import ItemList from './ItemList';
 import Card from './Card';
-import useFetch from './useFetch';
-
+import { useFetch } from './hooks/useFetch';
+import { TodoList } from "./TodoList";
 
 function App() {
   const name = "Mario";
@@ -34,6 +34,12 @@ function App() {
       <div>
         {loading ? "Caricamento in corso..." : error ? `Errore: ${error}` : JSON.stringify(data)}
       </div>
+
+      <div>
+      <h1>Lista To-Do (Fetch con Hook Personalizzato)</h1>
+      {/* Inseriamo la nostra componente con la lista */}
+      <TodoList />
+    </div>
 
       <Counter />
       <HelloWord />
