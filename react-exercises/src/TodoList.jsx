@@ -1,10 +1,12 @@
 
-import { useState, useCallback, useMemo, useRef, useEffect } from "react";
+import { useState, useCallback, useMemo, useRef, useEffect, useContext } from "react";
 import { useFetch } from "./hooks/useFetch"; // importa il custom hook
 import { useFilteredTodos } from "./hooks/useFilteredTodos";
+import { TodoContext } from "./context/TodoContext";
 
 export const TodoList = () => {
     const { data, loading, error } = useFetch("https://jsonplaceholder.typicode.com/todos"); // usa il custom hook per ottenere i todo.
+    const { todos, setTodos } = useContext(TodoContext);
 
     // State per il termine di ricerca digitato dall'utente
     const [searchTerm, setSearchTerm] = useState("");
@@ -22,6 +24,14 @@ export const TodoList = () => {
             searchInputRef.current.focus();
         }
     }, []);
+
+    // Quando i dati vengono caricati, li salviamo nello stato globale dei todo
+    useEffect(() => {
+        if (data && data.length > 0 && todos.length === 0) {
+            setTodos(data);
+        }
+    }, [data, todos, setTodos]);
+
 
     // Usa il custom hook per ottenere i todo filtrati in base al termine di ricerca
     // Lista filtrata memorizzata con useMemo per evitare ricalcoli inutili

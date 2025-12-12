@@ -8,6 +8,7 @@ import ItemList from './ItemList';
 import Card from './Card';
 import { useFetch } from './hooks/useFetch';
 import { TodoList } from "./TodoList";
+import { TodoProvider } from "./context/TodoContext";
 
 function App() {
   const name = "Mario";
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <>
+      <TodoProvider>
       <h1>Primo esercizio react</h1>
       <p>Ciao mi chiamo {name}</p>
       <div>
@@ -36,10 +38,11 @@ function App() {
       </div>
 
       <div>
-      <h1>Lista To-Do (Fetch con Hook Personalizzato)</h1>
-      {/* Inseriamo la nostra componente con la lista */}
-      <TodoList />
-    </div>
+        <h1>Lista To-Do (Fetch con Hook Personalizzato)</h1>
+        {/* Inseriamo la nostra componente con la lista */}
+        <TodoList />
+
+      </div>
 
       <Counter />
       <HelloWord />
@@ -50,17 +53,14 @@ function App() {
         <p>Questa è la mia card color canarino!</p>
       </Card>
 
-      
+      </TodoProvider>
 
-
-
-
-    </>
-  );
+      </>
+      );
 
 }
 
-export default App;
+      export default App;
 
 
 
