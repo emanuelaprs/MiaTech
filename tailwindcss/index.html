@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercizi Tailwind CSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-   
-</head>
-<body class="bg-gray-100">
-    <div class="bg-violet-300 text-center text-white p-6 mt-10 max-w-md mx-auto rounded shadow-lg">
-        <h1 class="text-2xl font-bold mb-4">Esercizi Tailwind CSS</h1>
-        <p class="leading-relaxed mb-4">Proviamo a usare Tailwind CSS! Scopriamo come tilizzare testi, titoli, paragrafi e liste in modo semplice e veloce.</p>
 
-        <h2 class="text-xl font-semibold mb-2">Argomenti da non dimenticare!</h2>
+    <script>tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        myColor: '#7e96ef',
+                         brand: {
+                        50: '#e0f2ff',
+                        100: '#b3daff',
+                        200: '#80c2ff',
+                        300: '#4daaff',
+                        400: '#1a92ff',
+                        500: '#0077e6',
+                        600: '#005bb4',
+                        700: '#004182',
+                        800: '#002851',
+                        900: '#001221',
+                    }
+                    },
+                    spacing: {
+                        '7': '1.75rem',
+                        '9': '2.25rem',
+                        '10': '2.75rem',
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica', 'Arial', 'sans-serif'],
+                        heading: ['Georgia', 'serif'],
+                    },
+                },
+            },
+        }</script>
+
+</head>
+
+<body class="bg-gray-100">
+    <div class="bg-violet-300 border-4 border-myColor text-center text-white p-7 max-w-md mx-auto rounded shadow-lg m-7">
+        <h1 class="text-2xl font-heading font-bold mb-4">Esercizi Tailwind CSS</h1>
+        <p class="leading-relaxed mb-4">Proviamo a usare Tailwind CSS! Scopriamo come tilizzare testi, titoli, paragrafi
+            e liste in modo semplice e veloce.</p>
+
+        <h2 class="text-xl font-sans font-semibold mb-2">Argomenti da non dimenticare!</h2>
         <ul class="list-disc list-inside text-left leading-relaxed mt-6">
             <li>Colori e sfondi</li>
             <li>Tipografia</li>
@@ -20,9 +54,26 @@
         </ul>
     </div>
 
-    <div class="container mx-auto bg-purple-400 text-center text-white p-6 mt-10 rounded shadow-lg">
-        <h2 class="text-xl font-semibold mb-2">Container centrale</h2>
-        <p class="leading-relaxed mb-4">Questo è un esempio di una classe container di Tailwind CSS. Serve per centrare e limitare la larghezza del contenuto.</p>
+    <div class="container mx-auto bg-purple-400 text-center text-white p-9 mt-10 rounded shadow-lg">
+        <h2 class="text-xl font-sans font-semibold mb-2">Container centrale</h2>
+        <p class="leading-relaxed mb-4">Questo è un esempio di una classe container di Tailwind CSS. Serve per centrare
+            e limitare la larghezza del contenuto.</p>
     </div>
+    <div class="container mx-auto bg-myColor text-center text-brand-600 p-10 m-9 rounded shadow-lg">
+        <h2 class="text-xl font-semibold mb-2">Personalizzazioni</h2>
+    </div>
+
+    <div class="text-center mt-10 space-x-4">
+
+    <button class="bg-brand-100 text-brand-900 font-semibold px-6 py-2 rounded shadow hover:bg-brand-200">Click</button>
+    <button class="bg-brand-500 text-white font-semibold px-6 py-2 rounded shadow hover:bg-brand-600">Click</button>
+    <button class="bg-brand-700 text-white font-semibold px-6 py-2 rounded shadow hover:bg-brand-800">Click</button>
+    <button class="bg-brand-900 text-white font-semibold px-6 py-2 rounded shadow hover:bg-brand-700">Click</button>
+
+</div>
+
+
+
 </body>
+
 </html>
