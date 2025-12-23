@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-custom {
+    @apply bg-brand-500 text-white font-semibold px-6 py-2 rounded shadow hover:bg-brand-600 transition;
+  }
+}
+
+/* Il bottone di fatto non compare perché ho letto che il layering non funziona con il CDN tailwind - l'ho lasciato comunque come esempio*/
