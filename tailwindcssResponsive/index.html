@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-gray-800 text-white p-6 text-center text-xl font-bold">
+        Header della Pagina
+    </header>
+
+    <main class="flex flex-wrap gap-6 p-4">
+        <div class="w-full sm:w-1/2 lg:w-1/3 bg-red-400 p-6 text-white text-center rounded-lg">Box 1</div>
+        <div class="w-full sm:w-1/2 lg:w-1/3 bg-green-400 p-6 text-white text-center rounded-lg">Box 2</div>
+        <div class="w-full sm:w-1/2 lg:w-1/3 bg-blue-400 p-6 text-white text-center rounded-lg">Box 3</div>
+        <div class="w-full sm:w-1/2 lg:w-1/3 bg-yellow-400 p-6 text-white text-center rounded-lg">Box 4</div>
+        <div class="w-full sm:w-1/2 lg:w-1/3 bg-purple-400 p-6 text-white text-center rounded-lg">Box 5</div>
+        <div class="w-full sm:w-1/2 lg:w-1/3 bg-pink-400 p-6 text-white text-center rounded-lg">Box 6</div>
+
+        <div class="bg-green-200 p-4 mb-4 rounded-lg shadow-md">Sempre visibile</div>
+        <div class="bg-blue-200 p-4 mb-4 hidden md:block rounded-lg shadow-md">Solo tablet e desktop</div>
+        <div class="bg-red-200 p-4 mb-4 hidden lg:block rounded-lg shadow-md">Solo desktop</div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center text-lg">
+        Footer della Pagina
+    </footer>
+
+</body>
+
+</html>
