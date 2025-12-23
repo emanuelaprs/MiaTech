@@ -17,7 +17,6 @@ class Automobile {
 
     aggiungiChilometri(km) {
         this.chilometraggio += km;
-
         this.#incrementaContatore();
     }
 
@@ -82,7 +81,17 @@ class Automobile {
         return this.#contatoreChiamate;
     }
 
+    static verificaIstanza(obj, classe) {
+        if(obj instanceof classe) {
+            return `${obj.marca} ${obj.modello} è un'istanza di ${classe.name}`;
+        } else {
+            return `${obj.marca} ${obj.modello} non è un'istanza di ${classe.name}`;
+        }
+    }
+
 }
+
+
 
 const myCar = new Automobile("Ford", "Focus", 2010);
 console.log(myCar.descrizione());
@@ -112,8 +121,49 @@ class Elettrica extends Automobile {
 
 }
 
+// Esercizio Camion 
+
+class Camion extends Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0, caricoMassimo = 0) {
+        super(marca, modello, anno, chilometraggio);
+        this.caricoMassimo = caricoMassimo;
+        this.caricoAttuale = 0;
+    }
+
+    descrizione() {
+        return `Camion: ${this.marca} ${this.modello} ${this.anno}, Carico attuale: ${this.caricoAttuale}kg, Carico massimo: ${this.caricoMassimo}kg`;
+    }
+
+    carica(kg) {
+        if (this.caricoAttuale + kg <= this.caricoMassimo) {
+            this.caricoAttuale += kg;
+            console.log(`Caricato ${kg} kg. Carico attuale: ${this.caricoAttuale} kg.`);
+        } else {
+            console.log(`Impossibile caricare ${kg} kg. Supera la capacità massima di ${this.caricoMassimo} kg.`);
+        }
+    }
+
+    scarica(kg) {
+        if (this.caricoAttuale - kg >= 0) {
+            this.caricoAttuale -= kg;
+            console.log(`Scaricato ${kg} kg. Carico attuale: ${this.caricoAttuale} kg.`);
+        } else {
+            console.log(`Impossibile scaricare ${kg} kg. Il carico attuale è di ${this.caricoAttuale} kg.`);
+        }
+    }
+}
+
 const myElectricCar = new Elettrica("Volkwagen", "Model E", 2024, 500, 15000);
 console.log(myElectricCar.descrizione());
+
+// Esercizio Camion
+const mioCamion = new Camion("Volvo", "FH16", 2022, 20000, 50000);
+console.log(mioCamion.descrizione());
+mioCamion.carica(20000);  // Carica 20.000 kg
+
+// Esercizio Verifica istanza
+console.log(Automobile.verificaIstanza(autoTest, Automobile));
+console.log(Automobile.verificaIstanza(autoTest, Camion));    
 
 // Esercizio Saluta
 
@@ -169,3 +219,11 @@ console.log(a.chilometraggioAttuale); // 12000
 
 a.chilometraggioAttuale = 8000;    // non aumenta: valore resta 12000
 console.log(a.chilometraggioAttuale); // 12000
+
+// Esercizio Verifica istanza
+
+const autoTest = new Automobile("Toyota", "Corolla", 2020, 15000);
+const camionTest = new Camion("Volvo", "FH16", 2022, 20000, 50000);
+
+console.log(autoTest instanceof Automobile); 
+console.log(camionTest instanceof Camion);  
