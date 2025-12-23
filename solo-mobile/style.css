@@ -6,9 +6,13 @@ body {
     text-align: center;
 }
 
+
+/* Media query per schermi piccoli */
 @media (max-width: 768px) {
     body {
         background-color: blue;
         color: #777;
+        padding: 20px; /* riduciamo il padding */
+        text-align: left; /* allineamento a sinistra */
     }
 }

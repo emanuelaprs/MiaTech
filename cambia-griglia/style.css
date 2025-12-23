@@ -1,6 +1,8 @@
 .container {
     display: grid;
+    grid-template-columns: repeat(4, 100px);
     background-color: cadetblue;
+    gap: 2px; 
 }
 
 .container div {
@@ -8,9 +10,10 @@
     width: 100px;
     height: 50px;
     text-align: center;
-    margin: 2px;
 }
 
-.item9 {
-    grid-column: 8/9;
+.item8 {
+    grid-column: span 2;
 }
+
+/* Non sono sicura di questo esercizio */
